@@ -48,7 +48,7 @@
 			var promise = MenuSearchService.getMatchedMenuItems(ctrl.itemName);
 
 			  promise.then(function (response) {
-			    ctrl.found = response.data;
+			    ctrl.found = response;
 			  })
 			  .catch(function (error) {
 			    console.log("Something went terribly wrong.");
