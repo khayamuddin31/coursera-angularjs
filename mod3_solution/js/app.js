@@ -62,9 +62,15 @@
 			  url: (ApiBasePath + "/menu_items.json")
 			}).then(function (response) {
 			  console.log(response.data);
-			  
-			  var foundItems = response.data;
-			  
+			  var res =  response.data;
+			  var foundItems = res.menu_items;
+			  for (var i = 0; i < foundItems.length; i++) {
+			      var description = foundItems[i].description;
+			      if (description.toLowerCase().indexOf(searchTerm) === -1) {
+				foundItems.splice(1,i);
+			      }
+			    }
+			  console.log('Filtered array', foundItems);
 			  
 			})
 			.catch(function (error) {
