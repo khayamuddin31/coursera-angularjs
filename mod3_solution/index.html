@@ -22,7 +22,10 @@
 
     <!-- found-items should be implemented as a component -->
     <found-items items="list.found" on-remove="list.removeItem(index)"></found-items>
-     {{list.found}}
+     <li ng-repeat="item in list.found">
+        {{ item.name }}, {{ item.short_name }}, {{ item.description }}, 
+        <!--<button ng-click="list.onRemove({index: $index});">Remove Item</button>-->
+        </li>
   </div>
   <script src="js/angular.min.js"></script>
   <script src="js/app.js"></script>
