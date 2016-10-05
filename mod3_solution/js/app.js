@@ -44,7 +44,15 @@
 		  };
 		
 		ctrl.narrowResults = function(){
-			ctrl.found = MenuSearchService.getMatchedMenuItems(ctrl.itemName);
+			//ctrl.found = MenuSearchService.getMatchedMenuItems(ctrl.itemName);
+			var promise = MenuSearchService.getMatchedMenuItems(ctrl.itemName);
+
+			  promise.then(function (response) {
+			    ctrl.found = response.data;
+			  })
+			  .catch(function (error) {
+			    console.log("Something went terribly wrong.");
+			  });
 		};
 	
 	}
