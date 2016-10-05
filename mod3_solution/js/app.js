@@ -46,6 +46,7 @@
 		ctrl.narrowResults = function(){
 			if(ctrl.itemName === '' || ctrl.itemName === null){
 				ctrl.msg = "Nothing found";
+				return;
 			}
 			
 			var promise = MenuSearchService.getMatchedMenuItems(ctrl.itemName);
