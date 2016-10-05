@@ -64,10 +64,11 @@
 			  console.log(response.data);
 			  var res =  response.data;
 			  var foundItems = res.menu_items;
+		 	  var newItems = [];
 			  for (var i = 0; i < foundItems.length; i++) {
 			      var description = foundItems[i].description;
-			      if (description.toLowerCase().indexOf(searchTerm) === -1) {
-				foundItems.splice(i,1);
+			      if (description.toLowerCase().indexOf(searchTerm) !== -1) {
+				newItems.push(foundItems[i]);
 			      }
 			    }
 			  console.log('Filtered array', foundItems);
