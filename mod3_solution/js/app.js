@@ -31,8 +31,9 @@
 	NarrowItDownController.$inject = ['MenuSearchService'];
 	function NarrowItDownController(MenuSearchService){
 		var ctrl = this;
+		ctrl.itemName = "";
 		
-		ctrl.found = MenuSearchService.getMatchedMenuItems('aas');
+		
 		
 		ctrl.getMenuItems = function (searchTerm) {
 			
@@ -41,6 +42,10 @@
 		ctrl.removeItem = function (itemIndex) {
 			this.found.splice(itemIndex, 1);
 		  };
+		
+		ctrl.narrowResults = function(){
+			ctrl.found = MenuSearchService.getMatchedMenuItems(ctrl.itemName);
+		};
 	
 	}
 	MenuSearchService.$inject = ['$http', 'ApiBasePath'];
