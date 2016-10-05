@@ -11,7 +11,7 @@
 	  var ddo = {
 		templateUrl: 'loader/itemsloaderindicator.template.html',
 		scope: {
-		      items: '<',
+		      found: '<',
 		      onRemove: '&'
 		    },
 		    controller: FoundItemsDirectiveController,
