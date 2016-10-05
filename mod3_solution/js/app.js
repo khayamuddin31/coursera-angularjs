@@ -33,24 +33,30 @@
 		var ctrl = this;
 		ctrl.itemName = "";
 		ctrl.found=[];
+		ctrl.msg="";
 		
 		
 		
-		ctrl.getMenuItems = function (searchTerm) {
-			
-		  };
+
 		  
 		ctrl.removeItem = function (itemIndex) {
 			this.found.splice(itemIndex, 1);
 		  };
 		
 		ctrl.narrowResults = function(){
-			//ctrl.found = MenuSearchService.getMatchedMenuItems(ctrl.itemName);
+			if(ctrl.itemName === '' || ctrl.itemName === null){
+				ctrl.msg = "Nothing found";
+			}
+			
 			var promise = MenuSearchService.getMatchedMenuItems(ctrl.itemName);
 
 			  promise.then(function (response) {
 			    ctrl.found = response;
-				  console.log('Found items',ctrl.found);
+				console.log('Found items',ctrl.found);
+				  if(ctrl.found.length===0)
+					  ctrl.msg = "Nothing found";
+				  else
+					  ctrl.msg="";
 			  })
 			  .catch(function (error) {
 			    console.log("Something went terribly wrong.");
