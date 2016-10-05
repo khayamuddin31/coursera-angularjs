@@ -67,7 +67,7 @@
 			  for (var i = 0; i < foundItems.length; i++) {
 			      var description = foundItems[i].description;
 			      if (description.toLowerCase().indexOf(searchTerm) === -1) {
-				foundItems.splice(1,i);
+				foundItems.splice(i,1);
 			      }
 			    }
 			  console.log('Filtered array', foundItems);
