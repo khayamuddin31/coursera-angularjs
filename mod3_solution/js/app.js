@@ -9,7 +9,14 @@
 	
 	function FoundItems() {
 	  var ddo = {
-		templateUrl: 'loader/itemsloaderindicator.template.html'
+		templateUrl: 'loader/itemsloaderindicator.template.html',
+		scope: {
+		      items: '<',
+		      onRemove: '&'
+		    },
+		    controller: FoundItemsDirectiveController,
+		    controllerAs: 'list',
+		    bindToController: true
 	  };
 
 	  return ddo;
