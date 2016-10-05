@@ -72,6 +72,7 @@
 			      }
 			    }
 			  console.log('Filtered array', newItems);
+			 return newItems;
 			  
 			})
 			.catch(function (error) {
