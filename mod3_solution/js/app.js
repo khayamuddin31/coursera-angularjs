@@ -12,6 +12,7 @@
 		templateUrl: 'loader/itemsloaderindicator.template.html',
 		scope: {
 		      found: '<',
+			message: '@msg',
 		      onRemove: '&'
 		    },
 		    controller: FoundItemsDirectiveController,
