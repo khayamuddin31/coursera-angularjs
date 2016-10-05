@@ -32,6 +32,7 @@
 	function NarrowItDownController(MenuSearchService){
 		var ctrl = this;
 		ctrl.itemName = "";
+		ctrl.found=[];
 		
 		
 		
@@ -49,6 +50,7 @@
 
 			  promise.then(function (response) {
 			    ctrl.found = response;
+				  console.log('Found items',ctrl.found);
 			  })
 			  .catch(function (error) {
 			    console.log("Something went terribly wrong.");
