@@ -71,7 +71,7 @@
 				newItems.push(foundItems[i]);
 			      }
 			    }
-			  console.log('Filtered array', foundItems);
+			  console.log('Filtered array', newItems);
 			  
 			})
 			.catch(function (error) {
