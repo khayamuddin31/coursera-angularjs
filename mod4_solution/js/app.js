@@ -8,7 +8,7 @@
 	HomeAppController.$inject = ['$http', 'ApiBasePath','$scope'];
 	function HomeAppController($http, ApiBasePath){
 		var ctrl = this;
-		ctrl.catList = [];
+		ctrl.citems = [];
 
 	
 		
@@ -21,7 +21,7 @@
 		var promise = ctrl.fetchList();
 
 		promise.then(function (response) {
-			ctrl.catList = response.data;
+			ctrl.citems = response.data;
 			console.log('data ',ctrl.catList);
 		})
 		.catch(function (error) {
