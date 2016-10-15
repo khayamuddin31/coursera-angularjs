@@ -8,7 +8,8 @@ angular.module('MenuApp')
 ItemsListController.$inject = ['items']
 function ItemsListController(items) {
   var itemsCtrl = this;
-  itemsCtrl.items = items;
+  itemsCtrl.items = items.menu_items;
+  itemsCtrl.category = items.category;
 }
 
 })();
