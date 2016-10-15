@@ -1,16 +1,13 @@
-<table class="table table-hover">
-<thead>
-  <tr>
-  <th>Short Name</th>
-	<th>Item Name</th>
-	<th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr ng-repeat="item in $ctrl.items">
-	<td>{{item.short_name}}</td>
-	<td>{{item.name}}</td>
-  <td>{{item.description}}</td>
-  </tr>
-</tbody>
-</table>
+<div class="container">
+	<a ui-sref="home">Home</a> &lt;
+  <a ui-sref="categoriesList">Categories List</a> &lt; 
+  <h1> Displaying Details of Category</h1>
+  <p>Short Name :{{itemsCtrl.category.short_name}}</p>
+  <p>Name : {{itemsCtrl.category.name}}</p>
+  <br />
+
+  <div class="row">
+    <!-- Items List -->
+    <items items="itemsCtrl.items"></items>
+  </div>
+</div>
