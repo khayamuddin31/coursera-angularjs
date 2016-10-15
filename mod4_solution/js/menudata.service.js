@@ -24,7 +24,19 @@
 			});
 		
 		}
-		service.getItemsForCategory = function(){}
+		service.getItemsForCategory = function(categoryShortName){
+			return $http({
+			  method: "GET",
+			  url: (ApiBasePath + "/menu_items.json?category="+categoryShortName)
+			}).then(function (response) {
+			  console.log(response.data);
+			   return response.data;
+			  
+			})
+			.catch(function (error) {
+			  console.log(error);
+			});
+		}
 	}
 	
 })();
