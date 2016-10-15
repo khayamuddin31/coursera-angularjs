@@ -2,7 +2,8 @@
 	
 	'use strict';
 	
-	angular.module('MenuApp')
+	//angular.module('MenuApp')
+	angular.module('HomeApp')
 	.config(RoutesConfig);
 	
 	RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -13,7 +14,7 @@
 		$stateProvider
 		.state('home',{
 			url:'/home',
-			templateUrl:''
+			templateUrl:'src/menu.html'
 		});
 	}
 	
