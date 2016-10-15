@@ -7,7 +7,7 @@
 		templateUrl:'src/categories.html',
 		controller:CategoriesCtrl,
 		bindings:{
-			catList:'<'
+			citems:'<'
 		}
 	});
 	
