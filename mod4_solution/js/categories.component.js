@@ -3,16 +3,10 @@
 	'use strict';
 	
 	angular.module('MenuApp')
-	.component('categories',{
+	.component('categoriesList',{
 		templateUrl:'src/categories.html',
-		controller:CategoriesCtrl,
 		bindings:{
 			citems:'<'
 		}
 	});
-	
-	function CategoriesCtrl(){
-		var $ctrl = this;
-	}
-	
 })();
