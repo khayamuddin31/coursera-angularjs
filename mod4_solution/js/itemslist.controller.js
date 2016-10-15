@@ -6,7 +6,7 @@ angular.module('MenuApp')
 
 
 ItemsListController.$inject = ['items']
-function ItemDetailController(items) {
+function ItemsListController(items) {
   var itemsCtrl = this;
   itemsCtrl.items = items;
 }
