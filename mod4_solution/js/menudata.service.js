@@ -14,6 +14,13 @@
 			return $http({
 			  method: "GET",
 			  url: (ApiBasePath + "/categories.json")
+			}).then(function (response) {
+			  console.log(response.data);
+			   return response.data;
+			  
+			})
+			.catch(function (error) {
+			  console.log(error);
 			});
 		
 		}
