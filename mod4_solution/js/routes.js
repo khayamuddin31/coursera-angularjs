@@ -14,7 +14,13 @@
 		.state('home',{
 			url:'/home',
 			templateUrl:'src/menu.html'
-		});
+		})
+		
+		//categories list
+		.state('categoriesList', {
+		    url: '/categories-list',
+		    templateUrl: 'src/categories.html'
+		  });
 	}
 	
 })();
