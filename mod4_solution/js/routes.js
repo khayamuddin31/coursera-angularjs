@@ -19,7 +19,14 @@
 		//categories list
 		.state('categoriesList', {
 		    url: '/categories-list',
-		    templateUrl: 'src/categories.html'
+		    templateUrl: 'src/categories.html',
+		    Controller:'CategoriesListController as catCtrl',
+		    resolve:{
+		    	citems:['MenuDataService', function (MenuDataService) { 
+				return MenuDataService.getAllCategories();
+			}]
+		    }
+		
 		  });
 	}
 	
