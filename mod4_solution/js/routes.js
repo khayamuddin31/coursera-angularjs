@@ -8,11 +8,11 @@
 	RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 	function RoutesConfig($stateProvider, $urlRouterProvider){
 		
-		$urlRouterProvider.otherwise('/home');
+		$urlRouterProvider.otherwise('/');
 		
 		$stateProvider
 		.state('home',{
-			url:'/home',
+			url:'/',
 			templateUrl:'src/menu.html'
 		})
 		
