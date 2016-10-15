@@ -27,6 +27,17 @@
 			}]
 		    }
 		
+		  })
+		  .state('itemDetail', {
+		    url: '/items/{shortname}',
+		    templateUrl: 'src/items.html',
+		    controller: 'ItemsListController as itemCtrl',
+		    resolve: {
+		      items: ['$stateParams', 'MenuDataService',
+			    function ($stateParams, MenuDataService) {
+			      return MenuDataService.getItemsForCategory($stateParams.shortname);
+			    }]
+		    }
 		  });
 	}
 	
