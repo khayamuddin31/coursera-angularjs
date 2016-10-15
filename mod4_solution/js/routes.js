@@ -30,7 +30,7 @@
 		  })
 		  .state('itemsList', {
 		    url: '/items/{shortname}',
-		    templateUrl: 'src/items.html',
+		    templateUrl: 'src/items-template.html',
 		    controller: 'ItemsListController as itemsCtrl',
 		    resolve: {
 		      items: ['$stateParams', 'MenuDataService',
