@@ -1,7 +1,7 @@
 (function(){
 	'use strict';
 	
-	angular.module('HomeApp')
+	angular.module('HomeApp',[])
 	.controller('HomeAppController',HomeAppController)
 	.constant('ApiBasePath', "https://davids-restaurant.herokuapp.com");
 	
