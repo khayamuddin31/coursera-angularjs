@@ -2,7 +2,7 @@
 	
 	'use strict';
 	
-	angular.module('HomeApp')
+	angular.module('MenuApp')
 	.component('categories',{
 		templateUrl:'src/categories.html',
 		controller:CategoriesCtrl,
