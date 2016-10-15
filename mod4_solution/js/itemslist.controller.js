@@ -2,7 +2,7 @@
 'use strict';
 
   angular.module('MenuApp')
-  .controller('ItemsListController ', ItemsListController );
+  .controller('ItemsListController', ItemsListController );
 
 
   ItemsListController.$inject = ['items'];
