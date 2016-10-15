@@ -20,7 +20,7 @@
 		.state('categoriesList', {
 		    url: '/categories-list',
 		    templateUrl: 'src/main-categories.template.html',
-		    Controller:'CategoriesListController as catCtrl',
+		    controller:'CategoriesListController as catCtrl',
 		    resolve:{
 		    	citems:['MenuDataService', function (MenuDataService) { 
 				return MenuDataService.getAllCategories();
