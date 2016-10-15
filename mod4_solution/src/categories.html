@@ -1,26 +1,19 @@
-<div class="container">
-	<a ui-sref="home">Home</a> 
-  <h1>Categories</h1>
+<!-- Categories List -->
+<table class="table table-hover">
+<thead>
+  <tr>
+	<th>Short Name</th>
+	<th>Name</th>
+	<th>Special Instructions</th>
+  </tr>
+</thead>
+<tbody>
+  <tr ng-repeat="category in catCtrl.citems">
+	<td>{{category.short_name}}</td>
+	<td>{{category.name}}</td>
+	<td>{{category.special_instructions}}</td>
+  </tr>
+</tbody>
+</table>
 
-  <div class="row">
-  Data --> {{catCtrl.citems}}
-    <!-- Categories List -->
-	<table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Short Name</th>
-        <th>Name</th>
-        <th>Special Instructions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="category in catCtrl.citems">
-        <td>{{category.short_name}}</td>
-        <td>{{category.name}}</td>
-        <td>{{category.special_instructions}}</td>
-      </tr>
-    </tbody>
-  </table>
-    
-  </div>
-</div>
+
