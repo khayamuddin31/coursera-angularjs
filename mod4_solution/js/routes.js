@@ -28,7 +28,7 @@
 		    }
 		
 		  })
-		  .state('itemDetail', {
+		  .state('itemsList', {
 		    url: '/items/{shortname}',
 		    templateUrl: 'src/items.html',
 		    controller: 'ItemsListController as itemsCtrl',
