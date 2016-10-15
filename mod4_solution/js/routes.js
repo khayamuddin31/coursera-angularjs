@@ -18,7 +18,7 @@
 		
 		//categories list
 		.state('categoriesList', {
-		    url: '/categories-list',
+		    url: '/categories',
 		    templateUrl: 'src/main-categories.template.html',
 		    controller:'CategoriesListController as catCtrl',
 		    resolve:{
