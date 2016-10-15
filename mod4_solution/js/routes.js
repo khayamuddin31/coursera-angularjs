@@ -23,7 +23,7 @@
 		    controller:'CategoriesListController as catCtrl',
 		    resolve:{
 		    	citems:['MenuDataService', function (MenuDataService) { 
-				return MenuDataService.getAllCategories();
+				return MenuDataService.getAllCategories().data();
 			}]
 		    }
 		
