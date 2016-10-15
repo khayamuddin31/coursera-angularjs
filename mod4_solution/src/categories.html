@@ -9,7 +9,7 @@
 </thead>
 <tbody>
   <tr ng-repeat="category in $ctrl.citems">
-	<a ui-sref="itemsList({shortname: category.short_name})"><td>{{category.short_name}}</td></a>
+	<td><a ui-sref="itemsList({shortname: category.short_name})">{{category.short_name}}</a></td>
 	<td>{{category.name}}</td>
 	<td>{{category.special_instructions}}</td>
   </tr>
